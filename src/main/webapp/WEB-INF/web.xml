@@ -9,7 +9,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
-        <url-pattern>/hello-world</url-pattern>
+        <url-pattern>/main</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -19,5 +19,14 @@
     <servlet-mapping>
         <servlet-name>Market</servlet-name>
         <url-pattern>/mMarket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Basket</servlet-name>
+        <jsp-file>/testRedirectForward.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Basket</servlet-name>
+        <url-pattern>/basket</url-pattern>
     </servlet-mapping>
 </web-app>

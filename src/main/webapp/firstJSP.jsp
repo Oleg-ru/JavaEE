@@ -42,19 +42,19 @@
             Так же можно выводить с помощью предопределенной переменной "out" в html код
         --%>
         <br>
-        <%
-            DateFormat dateFormatNew = new SimpleDateFormat("mm-ss");
-            for (int i = 0; i < 10; i++) {
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                //для решения проблемы ошибки с println заимпортить томкат в Modules-Dependencies
-                out.println("<p>" + "test переменной" + dateFormatNew.format(dateNow) + "</p>");
-            }
+<%--        <%--%>
+<%--            DateFormat dateFormatNew = new SimpleDateFormat("mm-ss");--%>
+<%--            for (int i = 0; i < 10; i++) {--%>
+<%--                try {--%>
+<%--                    Thread.sleep(100);--%>
+<%--                } catch (InterruptedException e) {--%>
+<%--                    e.printStackTrace();--%>
+<%--                }--%>
+<%--                //для решения проблемы ошибки с println заимпортить томкат в Modules-Dependencies--%>
+<%--                out.println("<p>" + "test переменной" + dateFormatNew.format(dateNow) + "</p>");--%>
+<%--            }--%>
 
-        %>
+<%--        %>--%>
         <%
             TestClass testClass = new TestClass();
         %>

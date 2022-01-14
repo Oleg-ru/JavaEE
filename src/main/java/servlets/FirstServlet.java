@@ -15,9 +15,16 @@ public class FirstServlet extends HttpServlet {
         String surname = request.getParameter("surname");
 
         PrintWriter pw = response.getWriter();
-        pw.println("<html> <h1>Hello world! from doGet</h1>");
+        pw.println("<html>");
+        pw.println("<head>" + "<title>Main</title>" + "</head>");
         pw.println("<h2> Hi in our online shop named 'Market' dear " + name + " " + surname + "</h2>");
+        pw.println("");
         pw.println("</html>");
+        //redirect
+        //response.sendRedirect("/mMarket");
+        //response
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/mMarket");
+        dispatcher.forward(request, response);
         pw.close();
     }
 
