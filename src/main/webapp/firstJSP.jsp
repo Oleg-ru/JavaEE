@@ -16,6 +16,16 @@
 </head>
 <body>
     <h2>Горячии товары!</h2>
+    <h2>
+            Только для тебя мой дорогой
+            <%
+                String name = request.getParameter("name");
+                String surname = request.getParameter("surname");
+            %>
+            <%=
+                name + " " + surname
+            %>
+    </h2>
     <p>
         <%= "Скидка на все товары линейки Honor!" %>
         <br>

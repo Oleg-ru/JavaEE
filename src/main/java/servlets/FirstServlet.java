@@ -10,8 +10,14 @@ import java.io.PrintWriter;
 public class FirstServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //получение аргумента
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
+
         PrintWriter pw = response.getWriter();
-        pw.println("<html> <h1>Hello world! from doGet</h1> </html");
+        pw.println("<html> <h1>Hello world! from doGet</h1>");
+        pw.println("<h2> Hi in our online shop named 'Market' dear " + name + " " + surname + "</h2>");
+        pw.println("</html>");
         pw.close();
     }
 
