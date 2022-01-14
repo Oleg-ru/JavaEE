@@ -1,7 +1,4 @@
-<%@ page import="java.util.Date" %>
-<%@ page import="java.text.DateFormat" %>
-<%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="logic.TestClass" %>
+<%@ page import="logic.Cart" %>
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -16,5 +13,17 @@
 </head>
 <body>
     <h2>Корзина</h2>
+    <%
+        Cart cart = (Cart) session.getAttribute("cart");
+    %>
+
+    <p>
+        <%
+            String name = request.getParameter("name");
+            String surname = request.getParameter("quality");
+        %>
+    </p>
+<%--    <p> Наименование товара: <%= cart.getName() %> </p>--%>
+<%--    <p> Количество <%= cart.getQuantity() %> </p>--%>
 </body>
 </html>

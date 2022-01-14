@@ -22,11 +22,39 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Basket</servlet-name>
+        <servlet-name>SessionBasketServlet</servlet-name>
         <jsp-file>/testRedirectForward.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Basket</servlet-name>
-        <url-pattern>/basket</url-pattern>
+        <servlet-name>SessionBasketServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetServlet</servlet-name>
+        <servlet-class>cookies.SetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetServlet</servlet-name>
+        <url-pattern>/set-cookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetServlet</servlet-name>
+        <servlet-class>cookies.GetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetServlet</servlet-name>
+        <url-pattern>/get-cookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>cookies.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete-cookies</url-pattern>
+    </servlet-mapping>
+
 </web-app>
